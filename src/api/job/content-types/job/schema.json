@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Details": {
+      "type": "richtext",
+      "required": true
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Latitude": {
+      "type": "string"
+    },
+    "Longitude": {
+      "type": "string"
+    },
+    "Postcode": {
+      "type": "string"
+    },
+    "Budget": {
+      "type": "string"
+    },
+    "Job_date": {
+      "type": "date"
+    },
+    "Files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "Jobs"
+    },
+    "Contractor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contractor.contractor",
+      "inversedBy": "Jobs"
+    },
+    "Posted_on": {
+      "type": "datetime",
+      "required": true
+    },
+    "Is_job_completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "Completed_on": {
+      "type": "datetime"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "jobs"
+    }
+  }
+}
