@@ -68,7 +68,8 @@
       "required": true
     },
     "phone_number": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "profile_picture": {
       "type": "media",
@@ -79,12 +80,6 @@
       ]
     },
     "address": {
-      "type": "string"
-    },
-    "latitude": {
-      "type": "string"
-    },
-    "longitude": {
       "type": "string"
     },
     "postcode": {
@@ -101,9 +96,6 @@
       "relation": "manyToMany",
       "target": "api::job.job",
       "inversedBy": "users"
-    },
-    "joined_on": {
-      "type": "date"
     },
     "is_email_verified": {
       "type": "boolean",
@@ -125,6 +117,16 @@
       "relation": "manyToMany",
       "target": "api::portfolio.portfolio",
       "inversedBy": "users"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "joined_on": {
+      "type": "string",
+      "required": true
     }
   }
 }
