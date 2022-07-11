@@ -127,6 +127,108 @@
     "joined_on": {
       "type": "string",
       "required": true
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_id_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "profile_title": {
+      "type": "text",
+      "maxLength": 70
+    },
+    "hourly_rate": {
+      "type": "decimal"
+    },
+    "profile_body": {
+      "type": "richtext"
+    },
+    "education_degree_one": {
+      "type": "string"
+    },
+    "education_school_one": {
+      "type": "string"
+    },
+    "education_year_one": {
+      "type": "string"
+    },
+    "education_info_one": {
+      "type": "text"
+    },
+    "education_degree_two": {
+      "type": "string"
+    },
+    "education_school_two": {
+      "type": "string"
+    },
+    "education_year_two": {
+      "type": "string"
+    },
+    "education_info_two": {
+      "type": "text"
+    },
+    "education_degree_three": {
+      "type": "string"
+    },
+    "education_school_three": {
+      "type": "string"
+    },
+    "education_year_three": {
+      "type": "string"
+    },
+    "education_info_three": {
+      "type": "text"
+    },
+    "employment_title_one": {
+      "type": "string"
+    },
+    "employment_place_one": {
+      "type": "string"
+    },
+    "employment_year_one": {
+      "type": "string"
+    },
+    "employment_info_one": {
+      "type": "text"
+    },
+    "employment_title_two": {
+      "type": "string"
+    },
+    "employment_place_two": {
+      "type": "string"
+    },
+    "employment_year_two": {
+      "type": "string"
+    },
+    "employment_info_two": {
+      "type": "text"
+    },
+    "employment_title_three": {
+      "type": "string"
+    },
+    "employment_place_three": {
+      "type": "string"
+    },
+    "employment_year_three": {
+      "type": "string"
+    },
+    "employment_info_three": {
+      "type": "text"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skill.skill",
+      "inversedBy": "users"
+    },
+    "user_languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-language.user-language",
+      "inversedBy": "users"
     }
   }
 }

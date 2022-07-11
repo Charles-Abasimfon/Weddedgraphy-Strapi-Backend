@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * contractor service.
+ * skill service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::contractor.contractor');
+module.exports = createCoreService('api::skill.skill');

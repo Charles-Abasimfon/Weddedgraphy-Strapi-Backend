@@ -1,34 +1,32 @@
 {
   "kind": "collectionType",
-  "collectionName": "reviews",
+  "collectionName": "user_languages",
   "info": {
-    "singularName": "review",
-    "pluralName": "reviews",
-    "displayName": "Review",
-    "description": ""
+    "singularName": "user-language",
+    "pluralName": "user-languages",
+    "displayName": "User Language"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Review_text": {
-      "type": "text",
+    "name": {
+      "type": "string",
       "required": true
     },
-    "Review_rating": {
-      "type": "integer",
+    "language_id": {
+      "type": "uid",
       "required": true
     },
-    "Added_on": {
-      "type": "datetime",
-      "required": true
+    "description": {
+      "type": "text"
     },
     "users": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "reviews"
+      "inversedBy": "user_languages"
     }
   }
 }

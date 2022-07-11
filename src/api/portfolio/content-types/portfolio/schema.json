@@ -35,12 +35,6 @@
     "Contractor_name": {
       "type": "string"
     },
-    "Contractor": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::contractor.contractor",
-      "inversedBy": "Portfolios"
-    },
     "Added_on": {
       "type": "datetime",
       "required": true

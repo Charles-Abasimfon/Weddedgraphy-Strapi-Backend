@@ -49,18 +49,6 @@
         "audios"
       ]
     },
-    "Client": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::client.client",
-      "inversedBy": "Jobs"
-    },
-    "Contractor": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::contractor.contractor",
-      "inversedBy": "Jobs"
-    },
     "Posted_on": {
       "type": "datetime",
       "required": true

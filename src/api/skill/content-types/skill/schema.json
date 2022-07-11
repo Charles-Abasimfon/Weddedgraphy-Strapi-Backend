@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "reviews",
+  "collectionName": "skills",
   "info": {
-    "singularName": "review",
-    "pluralName": "reviews",
-    "displayName": "Review",
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "Skill",
     "description": ""
   },
   "options": {
@@ -12,23 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Review_text": {
-      "type": "text",
+    "name": {
+      "type": "string",
       "required": true
     },
-    "Review_rating": {
-      "type": "integer",
+    "skill_id": {
+      "type": "uid",
       "required": true
     },
-    "Added_on": {
-      "type": "datetime",
-      "required": true
+    "description": {
+      "type": "text"
     },
     "users": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "mappedBy": "reviews"
+      "mappedBy": "skills"
     }
   }
 }

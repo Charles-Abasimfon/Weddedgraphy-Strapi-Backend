@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  contractor controller
+ *  skill controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::contractor.contractor');
+module.exports = createCoreController('api::skill.skill');
